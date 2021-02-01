@@ -35,6 +35,8 @@
  */
 
 #include "main.h"
+#include "uart.h"
+#include "kprintf.h"
 
 // typedef unsigned long size_t;
 // typedef long ssize_t;
@@ -54,7 +56,7 @@ typedef unsigned short u_short;
 typedef unsigned long long u_quad_t;
 typedef long long quad_t;
 typedef unsigned long uintptr_t;
-typedef long ptrdiff_t;
+//typedef long ptrdiff_t;
 typedef unsigned int size_t;
 typedef int ssize_t;
 #define NULL (void*)0

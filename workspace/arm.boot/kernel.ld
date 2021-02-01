@@ -24,6 +24,7 @@ SECTIONS
    * that can be loaded by QEMU.
    */
  .startup . : { startup.o(.text) }
+ .exception . : { exception.o(.text) }
  /*
   * Now include the other sections of code.
   */
@@ -65,4 +66,8 @@ SECTIONS
  . = ALIGN(8);
  . = . + 0x1000; /* 4kB of stack memory */
  stack_top = .;
+ /*creation de la pile d'interruptions*/
+  . = ALIGN(8);
+ . = . + 0x1000; /* 4kB of stack memory */
+ irq_stack_top = .;
 }
